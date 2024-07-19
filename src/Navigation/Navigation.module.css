@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  border-bottom: 1px solid transparent rgb(206, 206, 231);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.link {
+  color: #101828;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-top: 20px;
+}
+
+.isActive {
+  color: #e44848;
+  border-bottom-color: rgb(206, 206, 231);
+}
