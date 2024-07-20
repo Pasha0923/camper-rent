@@ -134,11 +134,11 @@
   margin-top: 18px;
   margin-bottom: 20px;
   margin-right: auto;
-  margin-left: auto;
+  margin-left: 0;
 }
 .btn:hover,
 .btn:focus {
-  border: 1px solid #7a000046;
+  background: #d84343;
 }
 
 .searchButton:hover {

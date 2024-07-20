@@ -1,0 +1,43 @@
+@media screen and (min-width: 768px) {
+  .infoWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex-shrink: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrap {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+  }
+}
+.backToCatalog {
+  display: block;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  gap: 10px;
+  border-radius: 200px;
+  border: 1px solid rgba(71, 84, 103, 0.2);
+  cursor: pointer;
+  background: #e44848;
+  color: #ffffff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.08px;
+  margin-top: 18px;
+  margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.backToCatalog:hover {
+  background: #e44848; /* Можно оставить такой же цвет фона */
+  color: #ffffff; /* Можно оставить такой же цвет текста */
+  border-color: rgba(71, 84, 103, 0.2);
+}

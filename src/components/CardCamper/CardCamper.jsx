@@ -141,12 +141,22 @@ const CardCamper = ({ ad }) => {
 export default CardCamper;
 
 CardCamper.propTypes = {
-  ad: PropTypes.string,
-  name: PropTypes.string,
-  description: PropTypes.string,
-  rating: PropTypes.number,
-  reviews: PropTypes.array,
-  location: PropTypes.string,
-  price: PropTypes.number,
-  gallery: PropTypes.arrayOf(PropTypes.string),
+  ad: PropTypes.shape({
+    _id: PropTypes.string,
+    gallery: PropTypes.arrayOf(PropTypes.string),
+    name: PropTypes.string,
+    price: PropTypes.number,
+    rating: PropTypes.number,
+    reviews: PropTypes.array,
+    location: PropTypes.string,
+    description: PropTypes.string,
+    adults: PropTypes.number,
+    transmission: PropTypes.string,
+    engine: PropTypes.string,
+    details: PropTypes.shape({
+      kitchen: PropTypes.string,
+      beds: PropTypes.number,
+      AC: PropTypes.string,
+    }),
+  }),
 };

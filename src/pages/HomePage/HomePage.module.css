@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 64px;
+  width: 100%;
+  min-height: 620px;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  background-color: white;
+  background-image: url("../../assets/Campervan.jpg");
+  background-size: 1280px 732px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 40% 90%;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--accent-second-color);
+}
+
+.subtitle {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--main-color);
+  text-shadow: 2px 2px 4px rgba(234, 178, 196, 0.5);
+}
