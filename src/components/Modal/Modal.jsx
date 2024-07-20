@@ -7,9 +7,10 @@ import {
   useLocation,
 } from "react-router-dom";
 import css from "./Modal.module.css";
-import Features from "../Features/Features";
+// import Features from "../Features/Features";
 import Reviews from "../Reviews/Reviews";
 import PropTypes from "prop-types";
+import FeaturesItem from "../FeaturesItem/FeaturesItem";
 const Modal = ({ isOpen, onClose, ad }) => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -77,7 +78,10 @@ const Modal = ({ isOpen, onClose, ad }) => {
           </Link>
         </div>
         <Routes>
-          <Route path={`${ad._id}/features`} element={<Features ad={ad} />} />
+          <Route
+            path={`${ad._id}/features`}
+            element={<FeaturesItem ad={ad} />}
+          />
           <Route
             path={`${ad._id}/reviews`}
             element={<Reviews reviews={ad.reviews} />}

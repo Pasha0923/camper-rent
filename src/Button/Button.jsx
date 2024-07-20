@@ -1,15 +1,9 @@
 import css from "./Button.module.css";
 import PropTypes from "prop-types";
-const Button = ({
-  onClick,
-  children,
-  style = "primary",
-  type = "button",
-  disabled = false,
-}) => {
+const Button = ({ onClick, children, type = "button", disabled = false }) => {
   return (
     <button
-      className={css[style]}
+      className={css.btn}
       onClick={onClick}
       type={type}
       disabled={disabled}

@@ -21,7 +21,7 @@
 .btn:focus {
   background: #d84343;
 }
-.primary {
+/* .primary {
   display: inline-block;
   border-radius: 200px;
   padding: 15px 40px;
@@ -45,4 +45,4 @@
 }
 .primary:disabled {
   opacity: 0.6;
-}
+} */
