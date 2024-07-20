@@ -65,8 +65,14 @@
   .ratingWrap {
     display: flex;
     gap: 16px;
+    align-items: center;
   }
+  .container {
+    display: flex;
 
+    align-items: center;
+    gap: 4px;
+  }
   .cardLocation {
     margin-bottom: 0;
   }
@@ -147,4 +153,7 @@
 
 .favoriteIconActive {
   fill: red;
+}
+.iconStar {
+  fill: #ffc531;
 }

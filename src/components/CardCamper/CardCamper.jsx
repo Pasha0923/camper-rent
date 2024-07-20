@@ -71,16 +71,26 @@ const CardCamper = ({ ad }) => {
             </div>
           </div>
           <div className={css.ratingWrap}>
-            <p className={css.cardRating}>
-              {ad.rating}
-              <span>({ad.reviews.length} Reviews)</span>
-            </p>
-            <p className={css.cardLocation}>{ad.location}</p>
+            <div className={css.container}>
+              {" "}
+              <svg width="18" height="18" className={css.iconStar}>
+                <use href={`${icons}#icon-star`}></use>
+              </svg>
+              <p className={css.cardRating}>
+                {ad.rating}
+                <span>({ad.reviews.length} Reviews)</span>
+              </p>{" "}
+            </div>
+            <div className={css.container}>
+              <svg width="16" height="16" className={css.iconLocation}>
+                <use href={`${icons}#icon-map-pin`}></use>
+              </svg>
+              <p className={css.cardLocation}>{ad.location}</p>
+            </div>
           </div>
         </div>
         <p className={css.cardDescription}>{ad.description}</p>
         <div className={css.detailsCont}>
-          {/* <div className={css.cardBox}> */}
           <p className={css.cardDetails}>
             {" "}
             <svg width="20" height="20" className={css.iconAdult}>
@@ -88,7 +98,6 @@ const CardCamper = ({ ad }) => {
             </svg>
             {ad.adults} adults
           </p>
-          {/* </div> */}
           <p className={css.cardDetails}>
             {" "}
             <svg width="20" height="20" className={css.iconAdult}>
