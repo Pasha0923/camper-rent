@@ -31,7 +31,6 @@ const Filter = ({ filters, onFilterChange, onSearch }) => {
   });
   const handleSearch = (values, { resetForm }) => {
     resetForm();
-    console.log(values);
   };
   return (
     <Formik

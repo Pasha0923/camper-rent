@@ -4,8 +4,7 @@ const advertsSlice = createSlice({
   name: "adverts",
   initialState: {
     adverts: [],
-    // status: "idle",
-    isLoading: false, // Изменение на использование isLoading
+    isLoading: false,
     isError: null,
   },
   reducers: {},
@@ -13,20 +12,17 @@ const advertsSlice = createSlice({
     builder
       .addCase(fetchAdverts.pending, (state) => {
         state.isLoading = true;
-        // state.status = "loading";
-        state.isError = null; // Сброс ошибки при начале загрузки
+        state.isError = null;
       })
       .addCase(fetchAdverts.fulfilled, (state, action) => {
-        // state.status = "succeeded";
-        state.isLoading = false; // Установка isLoading в false при успешной загрузке
+        state.isLoading = false;
         const newAdverts = action.payload.filter(
           (newAd) => !state.adverts.some((advert) => advert._id === newAd._id)
         );
         state.adverts = [...state.adverts, ...newAdverts];
       })
       .addCase(fetchAdverts.rejected, (state, action) => {
-        // state.status = "failed";
-        state.isLoading = false; // Установка isLoading в false при ошибке загрузки
+        state.isLoading = false;
         state.isError = action.error.message;
       });
   },

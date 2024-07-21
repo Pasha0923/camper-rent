@@ -14,7 +14,7 @@ const Favorites = () => {
           <p>No favorites selected yet</p>
         ) : (
           favorites.map((adverts) => (
-            <CardCamper key={adverts._id} ad={adverts} />
+            <CardCamper key={adverts._id} adverts={adverts} />
           ))
         )}
         <Link to="/catalog" className={css.backToCatalog}>
