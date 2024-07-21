@@ -42,9 +42,9 @@ const Modal = ({ isOpen, onClose, adverts }) => {
         </button>
         <h2 className={css.modalTitle}>{adverts.name}</h2>
         <div className={css.ratingCont}>
-          <div className={css.container}>
+          <div className={css.containerOne}>
             {" "}
-            <svg width="18" height="18" className={css.iconStar}>
+            <svg width="17" height="17" className={css.iconStar}>
               <use href={`${icons}#icon-star`}></use>
             </svg>
             <p className={css.cardRating}>
@@ -52,7 +52,7 @@ const Modal = ({ isOpen, onClose, adverts }) => {
               <span>({adverts.reviews.length} Reviews)</span>
             </p>{" "}
           </div>
-          <div className={css.container}>
+          <div className={css.containerTwo}>
             <svg width="16" height="16" className={css.iconLocation}>
               <use href={`${icons}#icon-map-pin`}></use>
             </svg>

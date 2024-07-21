@@ -24,7 +24,7 @@
   border-radius: 200px;
   border: 1px solid rgba(71, 84, 103, 0.2);
   cursor: pointer;
-  background: #e44848;
+  background: #85e285;
   color: #ffffff;
   font-size: 16px;
   font-style: normal;
@@ -35,9 +35,4 @@
   margin-bottom: 20px;
   margin-right: auto;
   margin-left: auto;
-}
-.backToCatalog:hover {
-  background: #e44848; /* Можно оставить такой же цвет фона */
-  color: #ffffff; /* Можно оставить такой же цвет текста */
-  border-color: rgba(71, 84, 103, 0.2);
 }

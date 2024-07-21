@@ -75,10 +75,14 @@
     height: 180px;
     border-radius: 8px;
   }
-  .container {
+  .containerOne {
     display: flex;
-
-    align-items: center;
+    place-items: center;
+    gap: 4px;
+  }
+  .containerTwo {
+    display: flex;
+    place-items: center;
     gap: 4px;
   }
 }
@@ -121,6 +125,7 @@
   .ratingCont {
     display: flex;
     gap: 16px;
+    align-items: center;
   }
 }
 

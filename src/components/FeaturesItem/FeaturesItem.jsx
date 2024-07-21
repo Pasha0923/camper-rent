@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import icons from "../../assets/symbol-defs.svg";
 import css from "./FeaturesItem.module.css";
-import Form from "../Form/ModalForm";
+import Form from "../ModalForm/ModalForm";
 const FeaturesItem = ({ adverts }) => {
   return (
     <div className={css.featuresCont}>

@@ -30,7 +30,7 @@ const Form = () => {
     defaultValues: {
       name: "",
       email: "",
-      bookingDate: new Date(), // Установите начальное значение здесь
+      bookingDate: new Date(),
       comment: "",
     },
   });
