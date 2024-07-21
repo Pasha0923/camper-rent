@@ -1,4 +1,4 @@
-import CatalogList from "../components/CatalogList/CatalogList";
+import CatalogList from "../../components/CatalogList/CatalogList";
 
 const CatalogPage = () => {
   return (
