@@ -1,8 +1,37 @@
-# React + Vite
+# Camper-Rent
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  Camper-Rent is a web application for renting campers
 
-Currently, two official plugins are available:
+# Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone the repository.
+2. Install dependencies using npm:
+ npm install
+
+# Usage 
+ Start the development server:
+npm run dev
+
+The project will be open in the browser at http://localhost:3000 
+
+# Features
+
+* Users can Browse and rent available campers
+* Booking: Users can book campers by filling out a booking form.
+* Filters: Users can filter campers by location, amenities, and type
+* Favorites: Users can add campers to favorites and view them on the favorites page.
+
+# Technical Stack
+* React
+* React-Router:
+* Redux
+* Formik
+* Yup
+* Axios
+
+# Contributing
+
+If you want to join the project, please follow these steps:
+1. Please fork the repository
+2. Create a new branch with a descriptive name
+3. Сreate a pull request
