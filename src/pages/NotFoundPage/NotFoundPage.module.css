@@ -1,4 +1,4 @@
-.container {
+.div {
   position: relative;
   width: 100%;
   min-height: 620px;
@@ -8,7 +8,7 @@
   text-align: center;
   font-size: 18px;
   line-height: 2.5;
-  background-image: url("../../assets/oops.jpg");
+  background-image: url("../../assets/oops-404.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 40%;

@@ -7,11 +7,10 @@ import {
   useLocation,
 } from "react-router-dom";
 import css from "./Modal.module.css";
-// import Features from "../Features/Features";
 import Reviews from "../Reviews/Reviews";
 import PropTypes from "prop-types";
 import FeaturesItem from "../FeaturesItem/FeaturesItem";
-const Modal = ({ isOpen, onClose, ad }) => {
+const Modal = ({ isOpen, onClose, adverts }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -40,24 +39,24 @@ const Modal = ({ isOpen, onClose, ad }) => {
         <button className={css.modalClose} onClick={closeModal}>
           ×
         </button>
-        <h2 className={css.modalTitle}>{ad.name}</h2>
+        <h2 className={css.modalTitle}>{adverts.name}</h2>
         <div className={css.ratingCont}>
           <p className={css.modalRating}>
-            {ad.rating}
-            <span>({ad.reviews.length} Reviews)</span>
+            {adverts.rating}
+            <span>({adverts.reviews.length} Reviews)</span>
           </p>
-          <p className={css.modalLocation}>{ad.location}</p>
+          <p className={css.modalLocation}>{adverts.location}</p>
         </div>
-        <p className={css.modalPrice}>€ {ad.price.toFixed(2)}</p>
+        <p className={css.modalPrice}>€ {adverts.price.toFixed(2)}</p>
         <div className={css.gallery}>
-          {ad.gallery.map((image, index) => (
+          {adverts.gallery.map((image, index) => (
             <img key={index} src={image} alt={`camper gallery ${index + 1}`} />
           ))}
         </div>
-        <p className={css.modalDescr}>{ad.description}</p>
+        <p className={css.modalDescr}>{adverts.description}</p>
         <div className={css.tabs}>
           <Link
-            to={`${ad._id}/features`}
+            to={`${adverts._id}/features`}
             className={
               location.pathname.includes("features")
                 ? css.activeTab
@@ -67,7 +66,7 @@ const Modal = ({ isOpen, onClose, ad }) => {
             Features
           </Link>
           <Link
-            to={`${ad._id}/reviews`}
+            to={`${adverts._id}/reviews`}
             className={
               location.pathname.includes("reviews")
                 ? css.activeTab
@@ -79,12 +78,12 @@ const Modal = ({ isOpen, onClose, ad }) => {
         </div>
         <Routes>
           <Route
-            path={`${ad._id}/features`}
-            element={<FeaturesItem ad={ad} />}
+            path={`${adverts._id}/features`}
+            element={<FeaturesItem adverts={adverts} />}
           />
           <Route
-            path={`${ad._id}/reviews`}
-            element={<Reviews reviews={ad.reviews} />}
+            path={`${adverts._id}/reviews`}
+            element={<Reviews reviews={adverts.reviews} />}
           />
         </Routes>
       </div>
@@ -101,5 +100,5 @@ Modal.propTypes = {
   openModal: PropTypes.func,
   closeModal: PropTypes.func,
   onClose: PropTypes.func,
-  ad: PropTypes.string,
+  adverts: PropTypes.string,
 };

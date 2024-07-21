@@ -141,7 +141,7 @@ const CardCamper = ({ ad }) => {
         <div>
           <Button onClick={openModal}>Show more</Button>
         </div>
-        <Modal isOpen={isModalOpen} onClose={closeModal} ad={ad} />
+        <Modal isOpen={isModalOpen} onClose={closeModal} adverts={ad} />
       </div>
     </div>
   );

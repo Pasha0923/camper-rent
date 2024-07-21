@@ -90,15 +90,13 @@ const CatalogList = () => {
               Load more
             </button>
           )}
-        {!isLoading &&
-          filteredAds.length % 4 !== 0 &&
-          filteredAds.length > 0 && <p>End of catalog.</p>}
+        {!isLoading && filteredAds.length % 4 !== 0 && filteredAds.length > 0}
         {isError && <p>Error: {isError}</p>}
         {selectedAd && (
           <Modal
             isOpen={!!selectedAd}
             onClose={handleCloseModal}
-            ad={selectedAd}
+            adverts={selectedAd}
           />
         )}
       </div>
