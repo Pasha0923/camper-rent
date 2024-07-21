@@ -6,16 +6,13 @@
 
 1. Clone the repository.
 2. Install dependencies using npm:
-```bash
+```bash npm install
 
-npm install
 
 # Usage 
  Start the development server:
 
-```bash
-
-npm run dev
+```bash npm run dev
 
 The project will be open in the browser at http://localhost:3000 
 
