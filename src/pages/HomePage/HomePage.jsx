@@ -4,7 +4,7 @@ const HomePage = () => (
     <h1 className={css.title}>Welcome to Camper Rental</h1>
     <h2 className={css.subtitle}>
       {" "}
-      Discover the best campers for your adventures!
+      Embark on adventures with our best campers!
     </h2>
   </div>
 );
