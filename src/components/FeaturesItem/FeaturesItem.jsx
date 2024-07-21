@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import icons from "../../assets/symbol-defs.svg";
 import css from "./FeaturesItem.module.css";
+import Form from "../Form/ModalForm";
 const FeaturesItem = ({ adverts }) => {
   return (
     <div className={css.featuresCont}>
@@ -168,7 +169,7 @@ const FeaturesItem = ({ adverts }) => {
           </ul>
         </div>
       </div>
-      {/* <Form /> */}
+      <Form />
     </div>
   );
 };
@@ -185,9 +186,9 @@ FeaturesItem.propTypes = {
     consumption: PropTypes.string,
     details: PropTypes.shape({
       bathroom: PropTypes.number,
-      kitchen: PropTypes.bool,
+      kitchen: PropTypes.number,
       beds: PropTypes.number,
-      airConditioner: PropTypes.string,
+      airConditioner: PropTypes.number,
       TV: PropTypes.number,
       CD: PropTypes.number,
       radio: PropTypes.number,
@@ -196,7 +197,7 @@ FeaturesItem.propTypes = {
       freezer: PropTypes.number,
       hob: PropTypes.number,
       microwave: PropTypes.number,
-      gas: PropTypes.number,
+      gas: PropTypes.string,
       water: PropTypes.string,
     }),
   }),

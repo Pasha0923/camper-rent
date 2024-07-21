@@ -8,16 +8,16 @@ import icons from "../../assets/all-icons.svg";
 import { addFavorite, removeFavorite } from "../../redux/favorites/slice";
 import Button from "../../Button/Button";
 import { isFavorite } from "../../redux/favorites/selectors";
-const CardCamper = ({ ad }) => {
+const CardCamper = ({ adverts }) => {
   const dispatch = useDispatch();
-  const favorite = useSelector((state) => isFavorite(state, ad?._id));
+  const favorite = useSelector((state) => isFavorite(state, adverts?._id));
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleFavorite = () => {
     if (favorite) {
-      dispatch(removeFavorite(ad));
+      dispatch(removeFavorite(adverts));
     } else {
-      dispatch(addFavorite(ad));
+      dispatch(addFavorite(adverts));
     }
   };
 
@@ -29,19 +29,19 @@ const CardCamper = ({ ad }) => {
     setIsModalOpen(false);
   };
 
-  if (!ad || !ad.gallery || ad.gallery.length === 0) {
+  if (!adverts || !adverts.gallery || adverts.gallery.length === 0) {
     return null;
   }
 
   return (
     <div className={css.wrap}>
-      <img src={ad.gallery[0]} alt="First Image" className={css.image} />
+      <img src={adverts.gallery[0]} alt="First Image" className={css.image} />
       <div className={css.infoWrap}>
         <div>
           <div className={css.headerWrap}>
-            <h2 className={css.cardTitle}>{ad.name}</h2>
+            <h2 className={css.cardTitle}>{adverts.name}</h2>
             <div className={css.favoriteAction} onClick={toggleFavorite}>
-              <p className={css.cardPrice}>€ {ad.price.toFixed(2)}</p>
+              <p className={css.cardPrice}>€ {adverts.price.toFixed(2)}</p>
               <svg
                 className={favorite ? css.favoriteIconActive : css.favoriteIcon}
                 xmlns="http://www.w3.org/2000/svg"
@@ -77,43 +77,44 @@ const CardCamper = ({ ad }) => {
                 <use href={`${icons}#icon-star`}></use>
               </svg>
               <p className={css.cardRating}>
-                {ad.rating}
-                <span>({ad.reviews.length} Reviews)</span>
+                {adverts.rating}
+                <span>({adverts.reviews.length} Reviews)</span>
               </p>{" "}
             </div>
             <div className={css.container}>
               <svg width="16" height="16" className={css.iconLocation}>
                 <use href={`${icons}#icon-map-pin`}></use>
               </svg>
-              <p className={css.cardLocation}>{ad.location}</p>
+              <p className={css.cardLocation}>{adverts.location}</p>
             </div>
           </div>
         </div>
-        <p className={css.cardDescription}>{ad.description}</p>
+        <p className={css.cardDescription}>{adverts.description}</p>
         <div className={css.detailsCont}>
           <p className={css.cardDetails}>
             {" "}
             <svg width="20" height="20" className={css.iconAdult}>
               <use href={`${icons}#icon-people`}></use>
             </svg>
-            {ad.adults} adults
+            {adverts.adults} adults
           </p>
           <p className={css.cardDetails}>
             {" "}
             <svg width="20" height="20" className={css.iconAdult}>
               <use href={`${icons}#icon-engine`}></use>
             </svg>
-            {ad.transmission.charAt(0).toUpperCase() + ad.transmission.slice(1)}
+            {adverts.transmission.charAt(0).toUpperCase() +
+              adverts.transmission.slice(1)}
           </p>
           <p className={css.cardDetails}>
             {" "}
             <svg width="20" height="20" className={css.iconAdult}>
               <use href={`${icons}#icon-petrol`}></use>
             </svg>{" "}
-            {ad.engine.charAt(0).toUpperCase() + ad.engine.slice(1)}
+            {adverts.engine.charAt(0).toUpperCase() + adverts.engine.slice(1)}
           </p>
 
-          {ad.details.kitchen && (
+          {adverts.details.kitchen && (
             <p className={css.cardDetails}>
               {" "}
               <svg width="20" height="20" className={css.iconAdult}>
@@ -127,21 +128,21 @@ const CardCamper = ({ ad }) => {
             <svg width="20" height="20" className={css.iconAdult}>
               <use href={`${icons}#icon-bed`}></use>
             </svg>
-            {ad.details.beds} beds
+            {adverts.details.beds} beds
           </p>
           <p className={css.cardDetails}>
             {" "}
             <svg width="20" height="20" className={css.iconAdult}>
               <use href={`${icons}#icon-electro`}></use>
             </svg>
-            {ad.details.AC} AC
+            {adverts.details.AC} AC
           </p>
         </div>
 
         <div>
           <Button onClick={openModal}>Show more</Button>
         </div>
-        <Modal isOpen={isModalOpen} onClose={closeModal} adverts={ad} />
+        <Modal isOpen={isModalOpen} onClose={closeModal} adverts={adverts} />
       </div>
     </div>
   );
@@ -150,7 +151,7 @@ const CardCamper = ({ ad }) => {
 export default CardCamper;
 
 CardCamper.propTypes = {
-  ad: PropTypes.shape({
+  adverts: PropTypes.shape({
     _id: PropTypes.string,
     gallery: PropTypes.arrayOf(PropTypes.string),
     name: PropTypes.string,
@@ -163,7 +164,7 @@ CardCamper.propTypes = {
     transmission: PropTypes.string,
     engine: PropTypes.string,
     details: PropTypes.shape({
-      kitchen: PropTypes.string,
+      kitchen: PropTypes.number,
       beds: PropTypes.number,
       AC: PropTypes.string,
     }),

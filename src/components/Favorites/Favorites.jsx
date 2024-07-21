@@ -11,7 +11,7 @@ const Favorites = () => {
     <div className={css.wrap}>
       <div className={css.infoWrap}>
         {favorites.length === 0 ? (
-          <p>No favorites selected yet.</p>
+          <p>No favorites selected yet</p>
         ) : (
           favorites.map((adverts) => (
             <CardCamper key={adverts._id} ad={adverts} />

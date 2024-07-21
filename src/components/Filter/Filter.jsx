@@ -1,12 +1,9 @@
 import PropTypes from "prop-types";
-// import { useState } from "react";
-// import { AiOutlineEnvironment } from "react-icons/ai";
 import css from "./Filter.module.css";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import Iconsvg from "../../Icon/Icon";
 import { useState } from "react";
-// import Iconsvg from "../assets/all-icons.svg";
 const Filter = ({ filters, onFilterChange, onSearch }) => {
   const [localFilters, setLocalFilters] = useState(filters);
 

@@ -9,7 +9,10 @@
   justify-content: center;
   align-items: center;
 }
-
+.cardRating {
+  color: #101828;
+  text-decoration-line: underline;
+}
 .modalContent {
   background: #fff;
   padding: 20px;
@@ -71,6 +74,12 @@
     width: 170px;
     height: 180px;
     border-radius: 8px;
+  }
+  .container {
+    display: flex;
+
+    align-items: center;
+    gap: 4px;
   }
 }
 
@@ -145,4 +154,7 @@
 
 .tabs a.inactiveTab {
   color: #101828;
+}
+.iconStar {
+  fill: #ffc531;
 }

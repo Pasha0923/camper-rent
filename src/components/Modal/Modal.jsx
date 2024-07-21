@@ -6,6 +6,7 @@ import {
   useNavigate,
   useLocation,
 } from "react-router-dom";
+import icons from "../../assets/all-icons.svg";
 import css from "./Modal.module.css";
 import Reviews from "../Reviews/Reviews";
 import PropTypes from "prop-types";
@@ -41,11 +42,22 @@ const Modal = ({ isOpen, onClose, adverts }) => {
         </button>
         <h2 className={css.modalTitle}>{adverts.name}</h2>
         <div className={css.ratingCont}>
-          <p className={css.modalRating}>
-            {adverts.rating}
-            <span>({adverts.reviews.length} Reviews)</span>
-          </p>
-          <p className={css.modalLocation}>{adverts.location}</p>
+          <div className={css.container}>
+            {" "}
+            <svg width="18" height="18" className={css.iconStar}>
+              <use href={`${icons}#icon-star`}></use>
+            </svg>
+            <p className={css.cardRating}>
+              {adverts.rating}
+              <span>({adverts.reviews.length} Reviews)</span>
+            </p>{" "}
+          </div>
+          <div className={css.container}>
+            <svg width="16" height="16" className={css.iconLocation}>
+              <use href={`${icons}#icon-map-pin`}></use>
+            </svg>
+            <p className={css.cardLocation}>{adverts.location}</p>
+          </div>
         </div>
         <p className={css.modalPrice}>€ {adverts.price.toFixed(2)}</p>
         <div className={css.gallery}>
@@ -100,5 +112,22 @@ Modal.propTypes = {
   openModal: PropTypes.func,
   closeModal: PropTypes.func,
   onClose: PropTypes.func,
-  adverts: PropTypes.string,
+  adverts: PropTypes.shape({
+    _id: PropTypes.string,
+    gallery: PropTypes.arrayOf(PropTypes.string),
+    name: PropTypes.string,
+    price: PropTypes.number,
+    rating: PropTypes.number,
+    reviews: PropTypes.array,
+    location: PropTypes.string,
+    description: PropTypes.string,
+    adults: PropTypes.number,
+    transmission: PropTypes.string,
+    engine: PropTypes.string,
+    details: PropTypes.shape({
+      kitchen: PropTypes.number,
+      beds: PropTypes.number,
+      AC: PropTypes.string,
+    }),
+  }),
 };

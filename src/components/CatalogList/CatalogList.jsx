@@ -72,11 +72,11 @@ const CatalogList = () => {
       </div>
       <div className={css.cards}>
         {filteredAds.length > 0 ? (
-          filteredAds.map((ad) => (
+          filteredAds.map((adverts) => (
             <CardCamper
-              key={ad._id}
-              ad={ad}
-              onClick={() => handleCardClick(ad)}
+              key={adverts._id}
+              adverts={adverts}
+              onClick={() => handleCardClick(adverts)}
             />
           ))
         ) : showNoResults ? (
