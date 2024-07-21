@@ -1,7 +1,6 @@
 import css from "./Reviews.module.css";
 import Form from "../ModalForm/ModalForm";
 import PropTypes from "prop-types";
-// import StarIcon from "../../assets/star.svg";
 import Iconsvg from "../../Icon/Icon";
 const getFirslLetterName = (name) => {
   const initials = name.trim().charAt(0).toUpperCase();
@@ -22,7 +21,6 @@ const Reviews = ({ reviews }) => (
             <div className={css.reviewRating}>
               <h3 className={css.reviewName}>{review.reviewer_name}</h3>
               <div className={css.starRating}>
-                {/* Генерация звезд в зависимости от рейтинга */}
                 {[...Array(review.reviewer_rating)].map((_, i) => (
                   <Iconsvg key={i} iconName="rating" className={css.starIcon} />
                 ))}

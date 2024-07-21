@@ -6,6 +6,7 @@ import CardCamper from "../CardCamper/CardCamper";
 import Modal from "../Modal/Modal";
 import Filter from "../Filter/Filter";
 import css from "./CatalogList.module.css";
+import Loader from "../Loader/Loader";
 
 const CatalogList = () => {
   const dispatch = useDispatch();
@@ -82,7 +83,7 @@ const CatalogList = () => {
         ) : showNoResults ? (
           <p>No ads found for the selected location.</p>
         ) : null}
-        {isLoading && <p>Loading...</p>} {/* Использование isLoading */}
+        {isLoading && <Loader />}
         {!isLoading &&
           filteredAds.length % 4 === 0 &&
           filteredAds.length > 0 && (

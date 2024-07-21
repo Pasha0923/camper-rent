@@ -56,9 +56,9 @@
   }
 
   .starIcon {
-    width: 20px; /* Примерная ширина */
-    height: 20px; /* Примерная высота */
-    fill: #ffc107; /* Цвет иконки */
+    width: 20px;
+    height: 20px;
+    fill: #ffc107;
   }
 }
 

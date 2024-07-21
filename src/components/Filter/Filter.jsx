@@ -51,7 +51,7 @@ const Filter = ({ filters, onFilterChange, onSearch }) => {
                 id="location"
                 name="location"
                 className={css.locationInput}
-                placeholder="enter the desired location"
+                placeholder="City"
                 value={localFilters.location}
                 onChange={handleChange}
               />

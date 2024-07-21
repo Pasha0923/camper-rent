@@ -21,28 +21,3 @@
 .btn:focus {
   background: #d84343;
 }
-/* .primary {
-  display: inline-block;
-  border-radius: 200px;
-  padding: 15px 40px;
-  background: var(--color-btn);
-
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: -0.01em;
-  color: var(--color-page-bg);
-
-  cursor: pointer;
-  border: none;
-  outline: none;
-  transition: all 0.25s ease-in-out;
-}
-.primary:hover,
-.primary:focus {
-  background: var(--color-btn-hover);
-}
-.primary:disabled {
-  opacity: 0.6;
-} */
